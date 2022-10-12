@@ -7,7 +7,7 @@ import About from "./pages/about"
 export default function App() {
   return (
     <Router>
-      <Navbar />
+      <Navbar/>
       <Routes>
         <Route path='/' exact component={Home} />
         <Route path='/about' component={About} />
