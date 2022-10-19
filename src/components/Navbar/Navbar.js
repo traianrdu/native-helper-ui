@@ -7,17 +7,20 @@ const classNameFunc = ({ isActive }) => (isActive ? "Navbar-button" : "Navbar-bu
 const Navbar = () => {
   return (
     <nav className="Navbar">
-      <NavLink className={classNameFunc} to='/get-started'>
-        Get started
+      <NavLink className={classNameFunc} to='/home'>
+        Home
       </NavLink>
-      <NavLink className={classNameFunc} to='/about'>
-        About
+      <NavLink className={classNameFunc} to='/features'>
+        Features
       </NavLink>
       <NavLink className={classNameFunc} to='/android-to-ios'>
         android-to-ios
       </NavLink>
       <NavLink className={classNameFunc} to='/ios-to-android'>
         ios-to-android
+      </NavLink>
+      <NavLink className={classNameFunc} to='/contact'>
+        Contact
       </NavLink>
       {/* Second Nav */}
       {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
