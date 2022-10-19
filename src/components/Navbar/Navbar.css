@@ -2,3 +2,37 @@
     background: linear-gradient(#63D471);
     background-color: orange;
 }
+
+.Navbar{
+    background-color: #1D2126;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+}
+
+.Navbar-button{
+    width: 100px;
+    vertical-align: middle;
+    padding: .5rem 1rem;
+    margin: 12px 12px;
+    line-height: 1.5;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    background-color: #303840;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 1rem;
+    font-family: 'Oswald';
+}

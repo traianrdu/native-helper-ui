@@ -2,28 +2,26 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 import './Navbar.css';
 
+const classNameFunc = ({ isActive }) => (isActive ? "Navbar-button" : "Navbar-button"); // either is active or not, it will show the same css
+
 const Navbar = () => {
   return (
-    <>
-      <div>
-        <nav class="Navbar-gradient">
-          <NavLink to='/get-started' activeStyle>
-            Get started
-          </NavLink>
-          <NavLink to='/about' activeStyle>
-            About
-          </NavLink>
-          <NavLink to='/android-to-ios' activeStyle>
-          android-to-ios
-          </NavLink>
-          <NavLink to='/ios-to-android' activeStyle>
-          ios-to-android
-          </NavLink>
-          {/* Second Nav */}
-          {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
-        </nav>
-      </div>
-    </>
+    <nav className="Navbar">
+      <NavLink className={classNameFunc} to='/get-started'>
+        Get started
+      </NavLink>
+      <NavLink className={classNameFunc} to='/about'>
+        About
+      </NavLink>
+      <NavLink className={classNameFunc} to='/android-to-ios'>
+        android-to-ios
+      </NavLink>
+      <NavLink className={classNameFunc} to='/ios-to-android'>
+        ios-to-android
+      </NavLink>
+      {/* Second Nav */}
+      {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
+    </nav>
   );
 };
 
