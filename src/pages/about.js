@@ -1,13 +1,12 @@
-  const About = () => {
+import React from 'react';  
+  
+const About = () => {
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'Right',
-        alignItems: 'Right',
-        height: '100vh'
-      }}
-    >
+    <div>
+      <h1>Welcome to Tutoriio</h1>
+      <h1>GeeksforGeeks is a Computer Science portal for geeks.</h1>
+      <h1>GeeksforGeeks is a Computer Science portal for geeks.</h1>
+      <h1>GeeksforGeeks is a Computer Science portal for geeks.</h1>
       <h1>GeeksforGeeks is a Computer Science portal for geeks.</h1>
     </div>
   );
