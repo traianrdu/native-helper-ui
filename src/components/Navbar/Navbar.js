@@ -4,7 +4,7 @@ import './Navbar.css';
 
 const classNameFunc = ({ isActive }) => (isActive ? "Navbar-button" : "Navbar-button"); // either is active or not, it will show the same css
 
-const Navbar = () => {
+export default function Navbar() {
   return (
     <nav className="Navbar">
       <NavLink className={classNameFunc} to='/'>
@@ -27,5 +27,3 @@ const Navbar = () => {
     </nav>
   );
 };
-
-export default Navbar;

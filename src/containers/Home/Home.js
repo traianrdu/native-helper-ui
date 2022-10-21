@@ -1,17 +1,17 @@
 import React from 'react'
 
 /**
- * USAGE OF CONTAINER EXAMPLE (NOT USED ANYMORE)
- */
-
-/**
  * Creates the page
  * @returns default homepage
  */
-export default function HomePage() {
+export default function Home() {
   return (
     <div>
         LOGO
+        {renderLogo()}
+        {renderLogo()}
+        {renderLogo()}
+        {renderLogo()}
         {renderLogo()}
     </div>
     
