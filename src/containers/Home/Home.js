@@ -9,6 +9,7 @@ export default function Home() {
     <div>
         LOGO
         {renderLogo()}
+        looo
         {renderLogo()}
         {renderLogo()}
         {renderLogo()}

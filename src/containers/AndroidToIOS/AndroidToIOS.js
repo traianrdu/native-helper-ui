@@ -9,8 +9,10 @@ export default function AndroidToIOS() {
   return (
     <div>
         LOGO
+        s
         {renderLogo()}
         {renderLogo()}
+        ss
         {renderLogo()}
         {renderLogo()}
         {renderLogo()}
