@@ -6,7 +6,8 @@ export default function ConvertableForm() {
     <from>
       <label>
           Android to IOS:
-          <input type="text" />
+          <br/>
+          <textarea className="ConvertableForm"/>
       </label>
     </from>
   );
