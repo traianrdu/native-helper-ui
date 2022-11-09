@@ -1,18 +1,21 @@
 export async function getAllUsers() {
-
-    try{
-        const response = await fetch('/api/users');
-        return await response.json();
-    }catch(error) {
-        return [];
-    }
+  try{
+    const response = await fetch('/api/users');
+    return await response.json();
+  }catch(error) {
+    return [];
+  }
 }
 
 export async function convertAndroidToIOS(data) {
-    const response = await fetch(`/api/user`, {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({user: data})
-      })
+  try{
+    const response = await fetch('http://192.168.0.66:5000//string_to_IOS', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({message: data})
+    })
     return await response.json();
+  } catch (error) {
+    return [];
+  }
 }
