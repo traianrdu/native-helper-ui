@@ -9,10 +9,14 @@ export async function getAllUsers() {
 }
 
 export async function convertAndroidToIOS(data) {
-    const response = await fetch(`/api/user`, {
+    try{
+      const response = await fetch('http://192.168.0.66:5000//string_to_IOS', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({user: data})
+        body: JSON.stringify({message: data})
       })
-    return await response.json();
-}
+      return await response.json();
+    } catch (error) {
+      return [];
+    }
+  }

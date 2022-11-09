@@ -14,5 +14,6 @@ export default function Button() {
  */
 function btnClick(data) {
   //debugger
-  convertAndroidToIOS(data)
+  let response = convertAndroidToIOS(data)
+  console.log(response);
 }
