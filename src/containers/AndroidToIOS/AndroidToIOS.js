@@ -1,5 +1,6 @@
 import React from 'react'
-import ConvertableForm from "../../components/ConvertableForm";
+import ConvertableForm from '../../components/ConvertableForm';
+import Button from '../../components/Button';
 
 /**
  * Creates the page
@@ -9,6 +10,7 @@ export default function AndroidToIOS() {
   return (
     <div>
         <ConvertableForm />
+        <Button />
     </div>
     
   )
