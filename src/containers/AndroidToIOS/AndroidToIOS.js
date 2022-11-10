@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useRef} from 'react'
 import ConvertableForm from '../../components/ConvertableForm';
 import Button from '../../components/Button';
 
@@ -7,14 +7,27 @@ import Button from '../../components/Button';
  * @returns default android to ios page
  */
 export default function AndroidToIOS() {
+  /*const [data, setData] = useState('');
+  const ref = (textAreaData) => {
+    setData(textAreaData);
+  }*/
+  const convertableRef = useRef(null);
+  const handleClick = event => {
+    // 👇️ access textarea value
+    console.log(convertableRef.current.value);
+  };
+
   return (
     <div>
-        <ConvertableForm />
-        <Button />
+        <ConvertableForm innerRef={convertableRef}/>
+        <Button type='submit' onClick={() => handleClick()}>Send</Button>
     </div>
-    
   )
 }
+
+/*function clickAction() {
+  console.log(ref.current.value);
+}*/
 
 /**
  * Renders logo
