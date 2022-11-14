@@ -1,8 +1,7 @@
-import React, {useRef} from 'react';
-import PropTypes from 'prop-types'
+import React from 'react';
 import './ConvertableForm.css';
 
-export default function ConvertableForm({ children, id, name, rows, cols, innerRef }) {
+export default function ConvertableForm({ children, id, name, rows, cols, inputRef }) {
   //const [inputText, setInputText] = useState("");
   //ref = useRef(null);
 
@@ -12,29 +11,12 @@ export default function ConvertableForm({ children, id, name, rows, cols, innerR
   };*/
 
   return (
-    <from>
+    <form>
       <label>
           {children}
-          Android to IOS:
           <br/>
-          <textarea id={id} name={name} rows={rows} cols={cols} ref={innerRef} className="ConvertableForm"/>
+          <textarea id={id} name={name} rows={rows} cols={cols} ref={inputRef} className="ConvertableForm"/>
       </label>
-    </from>
+    </form>
   );
 };
-
-ConvertableForm.defaultProps = {
-  id: '',
-  name: '',
-  rows: '',
-  cols: '',
-  innerRef: null
-}
-
-ConvertableForm.propTypes = {
-  children: PropTypes.node.isRequired,
-  id: PropTypes.string,
-  rows: PropTypes.string,
-  cols: PropTypes.string,
-  innerRef: PropTypes.func
-}

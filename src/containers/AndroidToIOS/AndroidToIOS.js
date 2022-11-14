@@ -1,6 +1,7 @@
-import React, {useState, useRef} from 'react'
+import React, {useRef} from 'react'
 import ConvertableForm from '../../components/ConvertableForm';
 import Button from '../../components/Button';
+import {convertAndroidToIOS} from '../../services/AndroidToIOS.js';
 
 /**
  * Creates the page
@@ -12,15 +13,20 @@ export default function AndroidToIOS() {
     setData(textAreaData);
   }*/
   const convertableRef = useRef(null);
-  const handleClick = event => {
-    // 👇️ access textarea value
-    console.log(convertableRef.current.value);
+  const handleSendConvertableText = event => {
+    // access textarea value
+    let data = convertableRef.current.value
+    // test string "<?xml version="1.0" encoding="utf-8"?><resources><string name="string_name">text_string</string></resources>"
+    let response = convertAndroidToIOS(data)
+    console.log("1")
+    console.log(response); // show response
+    console.log("2")
   };
 
   return (
     <div>
-        <ConvertableForm innerRef={convertableRef}/>
-        <Button type='submit' onClick={() => handleClick()}>Send</Button>
+        <ConvertableForm inputRef={convertableRef}>Android to IOS:</ConvertableForm>
+        <Button type='submit' onClick={() => handleSendConvertableText()}>Send</Button>
     </div>
   )
 }
@@ -34,9 +40,9 @@ export default function AndroidToIOS() {
  * @returns logo
  */
 function renderLogo() {
-    return (
-        <div>
-            log
-        </div>
-    )
+  return (
+    <div>
+        log
+    </div>
+  )
 }
